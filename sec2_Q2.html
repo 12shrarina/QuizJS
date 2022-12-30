@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter Number</label>
+    <input id="output" type="num">
+</br>
+</br>
+
+    <button onclick="add()">Add</button>
+    <script>
+        function add(){
+            var sum=0;
+            var odd =(document.getElementById("output").value);
+           var arr =new Array();  
+            for(var i=0; i<odd.length; i++){
+                var num = parseInt(odd[i]);
+                if ((num % 2) !== 0){
+                    arr.push(num);
+                }
+            }
+            for (var j = 0; j < arr.length; j++) {
+          sum += arr[j];
+            }
+                     document.write(sum);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>Enter year</h5>
+    <input id="year" type="number">
+</br>
+    <h5>Enter Month</h5>
+    <input id="month" type="number">
+</br>
+    <h5>Enter Date</h5>
+    <input id="birth" type="number">
+</br>
+</br>
+    <button onclick="findAge()">data</button>
+    <script>
+
+function findAge() 
+{
+ var current_date = 30; 
+
+var current_month = 12; 
+
+var current_year = 2022; 
+
+     var birth_year = parseInt(document.getElementById("year").value);
+ var birth_month =parseInt(document.getElementById("month").value);
+ var birth_date= parseInt(document.getElementById("birth").value);
+
+    var calculated_date = current_date - birth_date; 
+
+    var calculated_month = current_month - birth_month; 
+
+    var calculated_year = current_year - birth_year; 
+
+    document.write("Present Age<br>Years: "+(calculated_year)+" ");
+
+    document.write("Months: "+calculated_month+" ");
+
+    document.write("Days: "+calculated_date+" "); 
+ 
+} 
+</script>
+
+</body>
+</html>

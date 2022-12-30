@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter first row</label>
+    <input type="num">
+    <label>Enter second row</label>
+    <input type="num">
+</br>
+    <label>Enter first colum</label>
+    <input type="num">
+    <label>second colum</label>
+    <input type="num">
+</br>
+<button onclick="matric()">display</button>
+
+    <script>
+        function matric(){
+
+       
+    var N = 2;
+    var res = new Array(N);
+    for (let k = 0; k < N; k++) {
+     res[k] = new Array(N);
+    }
+    var mat1 = [
+    [ ],
+     [ ],
+    ];
+     var mat2 = [
+      [ ],
+    [ ],
+     ];
+    var i, j, k;
+    for (i = 0; i < N; i++) {
+     for (j = 0; j < N; j++) {
+     res[i][j] = 0;
+    for (k = 0; k < N; k++) {
+      res[i][j] += mat1[i][k] * mat2[k][j];
+     }
+     }
+     }
+    document.write("Result matrix is <br>");
+    for (i = 0; i < N; i++) {
+     document.write("[");
+     for (j = 0; j < N; j++) {
+    document.write(res[i][j] + " ");
+     }
+     document.write("]");
+     document.write("<br>");
+     }
+    }
+</script>
+</body>
+</html>
